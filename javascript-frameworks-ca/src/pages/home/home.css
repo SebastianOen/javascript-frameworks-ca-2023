@@ -1,0 +1,16 @@
+.store-title {
+  color: black;
+  font-size: 35px;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.Container {
+  width: 90%;
+  margin: auto;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}

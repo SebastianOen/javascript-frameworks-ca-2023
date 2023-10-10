@@ -1,0 +1,30 @@
+.cardTitle {
+  font-size: 1.5rem;
+  text-align: center;
+  position: relative;
+
+  text-decoration: none;
+}
+
+.itemInfo {
+  position: relative;
+  top: -100px;
+  background: rgba(0, 0, 0, 0.5);
+  height: 100px;
+  width: 100%;
+  text-align: center;
+}
+
+.productLink:hover {
+  transform: scale(1.1);
+}
+
+.productLink {
+  text-decoration: none;
+  color: white;
+  contain: content;
+  height: 380px;
+  width: 380px;
+  transition: transform 0.2s;
+  margin-bottom: 100px;
+}
