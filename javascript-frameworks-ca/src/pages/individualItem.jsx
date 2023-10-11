@@ -1,5 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import "./individualItem.css";
 
 function IndividualItem(props) {
   const queryString = document.location.search;
@@ -24,11 +25,16 @@ function IndividualItem(props) {
 
   console.log(data);
   return (
-    <div>
-      <h1>{data.title}</h1>
-      <img src={data.imageUrl} alt="" />
-      <p>{data.description}</p>
-      <p>{data.price},-</p>
+    <div className="itemContainer">
+      <h1 className="indItemTitle">{data.title}</h1>
+      <div className="itemInfoContainer">
+        <img src={data.imageUrl} className="itemImage" />
+        <div className="itemInfo">
+          <p>{data.description}</p>
+          <p>{data.price},-</p>
+          <button className="buyButton">Buy</button>
+        </div>
+      </div>
     </div>
   );
 }

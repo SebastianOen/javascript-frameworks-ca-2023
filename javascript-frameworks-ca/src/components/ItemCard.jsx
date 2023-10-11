@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import styles from "./ItemCard.module.css";
 import { Link } from "react-router-dom";
-import { Scales } from "phosphor-react";
 
 function ItemCard(props) {
   const targetUrl = `/product?id=${props.id}`;
