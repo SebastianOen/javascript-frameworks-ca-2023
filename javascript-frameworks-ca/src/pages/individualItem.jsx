@@ -23,7 +23,19 @@ function IndividualItem(props) {
     fetchData().catch(console.error);
   }, []);
 
-  console.log(data);
+  const selectedItem = {
+    id: data.id,
+    title: data.title,
+    price: data.price,
+    image: data.imageUrl,
+  };
+
+  const cartLocalStorage = JSON.parse(localStorage.getItem("cartList") || "[]");
+
+  const [cartList, setCartList] = useState(cartLocalStorage);
+
+  const [show, setShow] = useState(false);
+
   return (
     <div className="itemContainer">
       <h1 className="indItemTitle">{data.title}</h1>
@@ -32,7 +44,21 @@ function IndividualItem(props) {
         <div className="itemInfo">
           <p>{data.description}</p>
           <p>{data.price},-</p>
-          <button className="buyButton">Buy</button>
+          <button
+            className="buyButton"
+            onClick={() => {
+              const newList = cartList;
+              setShow(true);
+
+              newList.push(selectedItem);
+
+              setCartList(newList);
+              localStorage.setItem("cartList", JSON.stringify(newList));
+            }}
+          >
+            Buy
+          </button>
+          {show && <div>Item added</div>}
         </div>
       </div>
     </div>

@@ -1,0 +1,30 @@
+.contactTitle {
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin-bottom: 100px;
+  height: 100vh;
+  margin: auto;
+}
+
+.submitButton {
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+}
+
+.error {
+  color: red;
+}
+
+.submitted {
+  text-align: center;
+  margin-top: 10px;
+}
